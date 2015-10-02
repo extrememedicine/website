@@ -533,16 +533,83 @@ section#challenges {
     section#challenges .challenge.active h3:after {
       content: "Click for less"; }
 
-section#questions {
-  background: #E7E7E7; }
-  section#questions .content {
+section#conduct, section#faq {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  color: white;
+  background: #D74443; }
+  section#conduct > p, section#faq > p {
     max-width: 58rem;
     padding: 0 1.5rem;
     margin-left: auto;
     margin-right: auto; }
-    section#questions .content::after {
+    section#conduct > p::after, section#faq > p::after {
       clear: both;
       content: "";
       display: table; }
+  section#conduct .content, section#faq .content {
+    max-width: 58rem;
+    padding: 0 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0; }
+    section#conduct .content::after, section#faq .content::after {
+      clear: both;
+      content: "";
+      display: table; }
+    section#conduct .content li, section#faq .content li {
+      list-style-type: none; }
+      section#conduct .content li h2, section#faq .content li h2 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700; }
+      section#conduct .content li p, section#faq .content li p {
+        margin-bottom: 1.25rem; }
+      section#conduct .content li:not(:first-child), section#faq .content li:not(:first-child) {
+        border-top: 1px solid #E7E7E7; }
+
+section#apply {
+  text-align: center; }
+
+section#faq {
+  background: white;
+  color: black; }
+  section#faq ul {
+    padding-left: 0;
+    margin-top: 3rem; }
+    section#faq ul li:nth-child(odd) h2 {
+      color: #317FC7; }
+    section#faq ul li:nth-child(even) h2 {
+      color: #D74443; }
+
+section#who {
+  max-width: 58rem;
+  padding: 0 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem; }
+  section#who::after {
+    clear: both;
+    content: "";
+    display: table; }
+  section#who a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    section#who a:last-child {
+      margin-right: 0; }
+    section#who a h2 {
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      color: #36393E;
+      font-size: 1em; }
+    section#who a img {
+      height: 5rem;
+      display: block;
+      margin: 0 auto; }
 
  /*# sourceMappingURL=style.css.map */
