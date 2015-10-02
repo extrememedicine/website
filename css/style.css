@@ -393,12 +393,23 @@ section {
     text-align: center;
     font-family: "Montserrat", sans-serif;
     font-weight: 700; }
+    @media screen and (max-width: 520px) {
+      section h1 {
+        font-size: 1.5em; } }
 
 .dt img {
   position: absolute;
   height: 1.5em;
   top: 1.5em;
   left: 1.5em; }
+  @media screen and (max-width: 520px) {
+    .dt img {
+      margin: 0 auto;
+      display: block;
+      position: relative;
+      left: 0;
+      margin-bottom: -1.5em;
+      top: 2em; } }
 
 section#intro {
   background: url("../img/fold-bg.jpg") no-repeat center center fixed;
@@ -453,6 +464,21 @@ section#intro {
         -moz-transition: all 0.15s ease-out 0s;
         transition: all 0.15s ease-out 0s;
         background: #317FC7; }
+  @media screen and (max-width: 520px) {
+    section#intro {
+      display: block;
+      padding-top: 5em; }
+      section#intro img {
+        height: 5em; }
+      section#intro h1 {
+        margin-top: 2em;
+        font-size: 1.5em; }
+      section#intro h2 {
+        font-size: 1.25em; }
+      section#intro .register p {
+        display: block;
+        margin-right: 0;
+        margin-top: 0; } }
 
 section#nav {
   background: #E7E7E7;
@@ -477,6 +503,12 @@ section#nav {
       section#nav nav ul li {
         list-style-type: none;
         padding: 1.5em; }
+  @media screen and (max-width: 860px) {
+    section#nav nav ul li {
+      padding: 1.5em 0.75em; } }
+  @media screen and (max-width: 520px) {
+    section#nav {
+      display: none; } }
 
 section#about {
   max-width: 58rem;
@@ -532,6 +564,19 @@ section#challenges {
       margin-top: 1rem; }
     section#challenges .challenge.active h3:after {
       content: "Click for less"; }
+  @media screen and (max-width: 860px) {
+    section#challenges .challenge {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      section#challenges .challenge:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 520px) {
+    section#challenges .challenge h2 {
+      font-size: 1em; }
+    section#challenges .challenge h3 {
+      font-size: 1em; } }
 
 section#conduct, section#faq {
   padding-top: 3rem;
@@ -555,7 +600,8 @@ section#conduct, section#faq {
     margin-right: auto;
     padding-left: 0;
     margin-top: 0;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    margin-right: 0; }
     section#conduct .content::after, section#faq .content::after {
       clear: both;
       content: "";
@@ -569,6 +615,9 @@ section#conduct, section#faq {
         margin-bottom: 1.25rem; }
       section#conduct .content li:not(:first-child), section#faq .content li:not(:first-child) {
         border-top: 1px solid #E7E7E7; }
+  @media screen and (max-width: 860px) {
+    section#conduct .content, section#faq .content {
+      padding: 0 1.5em; } }
 
 section#apply {
   text-align: center; }
