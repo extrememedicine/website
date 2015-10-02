@@ -1,6 +1,7 @@
-(function() {
-  console.log('hello there!');
-
-}).call(this);
-
- //# sourceMappingURL=main.js.map
+$(document).ready(function() {
+	$(".challenge p").hide();
+	$(".challenge").click(function() {
+		$(this).children("p").slideToggle();
+		$(this).toggleClass("active");
+	});
+});
