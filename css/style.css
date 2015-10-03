@@ -557,11 +557,13 @@ section#challenges {
       margin: 0;
       font-family: "Montserrat", sans-serif;
       font-weight: 700; }
-    section#challenges .challenge h3:after {
-      content: "Click for more";
-      display: block;
-      font-size: 0.8rem;
-      margin-top: 1rem; }
+    section#challenges .challenge h3 {
+      line0height: 2; }
+      section#challenges .challenge h3:after {
+        content: "Click for more";
+        display: block;
+        font-size: 0.8rem;
+        margin-top: 1rem; }
     section#challenges .challenge.active h3:after {
       content: "Click for less"; }
   @media screen and (max-width: 860px) {
@@ -600,8 +602,7 @@ section#conduct, section#faq {
     margin-right: auto;
     padding-left: 0;
     margin-top: 0;
-    margin-bottom: 0;
-    margin-right: 0; }
+    margin-bottom: 0; }
     section#conduct .content::after, section#faq .content::after {
       clear: both;
       content: "";
@@ -610,7 +611,8 @@ section#conduct, section#faq {
       list-style-type: none; }
       section#conduct .content li h2, section#faq .content li h2 {
         font-family: "Montserrat", sans-serif;
-        font-weight: 700; }
+        font-weight: 700;
+        font-size: 1.25em; }
       section#conduct .content li p, section#faq .content li p {
         margin-bottom: 1.25rem; }
       section#conduct .content li:not(:first-child), section#faq .content li:not(:first-child) {
