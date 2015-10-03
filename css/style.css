@@ -608,7 +608,8 @@ section#conduct, section#faq {
       content: "";
       display: table; }
     section#conduct .content li, section#faq .content li {
-      list-style-type: none; }
+      list-style-type: none;
+      cursor: pointer; }
       section#conduct .content li h2, section#faq .content li h2 {
         font-family: "Montserrat", sans-serif;
         font-weight: 700;
