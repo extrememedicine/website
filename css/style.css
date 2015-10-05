@@ -464,6 +464,9 @@ section#intro {
         -moz-transition: all 0.15s ease-out 0s;
         transition: all 0.15s ease-out 0s;
         background: #317FC7; }
+  section#intro .back a {
+    margin-top: 2rem;
+    display: block; }
   @media screen and (max-width: 520px) {
     section#intro {
       display: block;
@@ -549,8 +552,7 @@ section#challenges {
     display: block;
     margin-right: 2.35765%;
     width: 48.82117%;
-    margin-top: 2rem;
-    cursor: pointer; }
+    margin-top: 2rem; }
     section#challenges .challenge:last-child {
       margin-right: 0; }
     section#challenges .challenge h2 {
@@ -558,12 +560,7 @@ section#challenges {
       font-family: "Montserrat", sans-serif;
       font-weight: 700; }
     section#challenges .challenge h3 {
-      line0height: 2; }
-      section#challenges .challenge h3:after {
-        content: "Click for more";
-        display: block;
-        font-size: 0.8rem;
-        margin-top: 1rem; }
+      line-height: 2; }
     section#challenges .challenge.active h3:after {
       content: "Click for less"; }
   @media screen and (max-width: 860px) {
@@ -621,9 +618,24 @@ section#conduct, section#faq {
   @media screen and (max-width: 860px) {
     section#conduct .content, section#faq .content {
       padding: 0 1.5em; } }
+  @media screen and (max-width: 520px) {
+    section#conduct .content li h2, section#faq .content li h2 {
+      font-size: 1em; } }
 
 section#apply {
   text-align: center; }
+  section#apply h1 {
+    margin-bottom: 1em; }
+  section#apply iframe {
+    max-width: 58rem;
+    padding: 0 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 75vh; }
+    section#apply iframe::after {
+      clear: both;
+      content: "";
+      display: table; }
 
 section#faq {
   background: white;
