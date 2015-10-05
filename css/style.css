@@ -626,6 +626,8 @@ section#apply {
   text-align: center; }
   section#apply h1 {
     margin-bottom: 1em; }
+  section#apply .link {
+    display: none; }
   section#apply iframe {
     max-width: 58rem;
     padding: 0 1.5rem;
@@ -636,6 +638,11 @@ section#apply {
       clear: both;
       content: "";
       display: table; }
+  @media screen and (max-width: 860px) {
+    section#apply .link {
+      display: block; }
+    section#apply .typeform-banner {
+      display: none; } }
 
 section#faq {
   background: white;
