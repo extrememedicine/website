@@ -661,12 +661,39 @@ section#faq {
     section#faq ul li:nth-child(even) h2 {
       color: #D74443; }
 
+section#twitter {
+  background: #317FC7; }
+  section#twitter h1 {
+    margin-bottom: 1em;
+    color: white; }
+  section#twitter #timeline {
+    max-width: 58rem;
+    padding: 0 1.5rem;
+    margin-left: auto;
+    margin-right: auto; }
+    section#twitter #timeline::after {
+      clear: both;
+      content: "";
+      display: table; }
+    section#twitter #timeline ul {
+      padding-left: 0; }
+      section#twitter #timeline ul li {
+        list-style-type: none;
+        text-align: center;
+        color: white;
+        margin-bottom: 2em; }
+        section#twitter #timeline ul li a {
+          color: white; }
+        section#twitter #timeline ul li:last-child {
+          margin-bottom: 0; }
+
 section#who {
   max-width: 58rem;
   padding: 0 1.5rem;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem;
+  margin-top: 3rem; }
   section#who::after {
     clear: both;
     content: "";
