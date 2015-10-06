@@ -14,10 +14,10 @@ $(document).ready(function() {
 	});
 
 	$(".challenge p").hide();
-	// $(".challenge").click(function() {
-	// 	$(this).children("p").slideToggle("fast");
-	// 	$(this).toggleClass("active");
-	// });
+	$(".challenge").click(function() {
+		$(this).children("p").slideToggle("fast");
+		$(this).toggleClass("active");
+	});
 
 	$("ul p").hide();
 	$("ul.collapse h2").click(function() {

@@ -552,7 +552,8 @@ section#challenges {
     display: block;
     margin-right: 2.35765%;
     width: 48.82117%;
-    margin-top: 2rem; }
+    margin-top: 2rem;
+    cursor: pointer; }
     section#challenges .challenge:last-child {
       margin-right: 0; }
     section#challenges .challenge h2 {
@@ -561,6 +562,11 @@ section#challenges {
       font-weight: 700; }
     section#challenges .challenge h3 {
       line-height: 2; }
+      section#challenges .challenge h3:after {
+        content: "Click for more";
+        display: block;
+        font-size: 0.8rem;
+        margin-top: 1rem; }
     section#challenges .challenge.active h3:after {
       content: "Click for less"; }
   @media screen and (max-width: 860px) {
