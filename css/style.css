@@ -629,7 +629,8 @@ section#conduct, section#faq {
       font-size: 1em; } }
 
 section#apply {
-  text-align: center; }
+  text-align: center;
+  padding: 3rem 1.5rem; }
   section#apply h1 {
     margin-bottom: 1em; }
   section#apply .link {
@@ -644,6 +645,26 @@ section#apply {
       clear: both;
       content: "";
       display: table; }
+  section#apply a {
+    background: #D74443;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    padding: 1em;
+    border-radius: 3px;
+    text-decoration: none;
+    outline: 0;
+    border: 0;
+    display: inline-block;
+    -webkit-transition: all 0.15s ease-out 0s;
+    -moz-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s; }
+    section#apply a:hover {
+      -webkit-transition: all 0.15s ease-out 0s;
+      -moz-transition: all 0.15s ease-out 0s;
+      transition: all 0.15s ease-out 0s;
+      background: #317FC7; }
   @media screen and (max-width: 860px) {
     section#apply .link {
       display: block; }
