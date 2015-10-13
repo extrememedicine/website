@@ -1,0 +1,385 @@
+// Imports
+
+	@import "normalize";
+	@import "bourbon/bourbon";
+	@import "neat/neat";
+
+// Variables
+
+	$blue: #317FC7;
+	$red: #D74443;
+	$grey-light: #E7E7E7;
+	$grey-dark: #36393E;
+	$blue-light: #DFEEFA;
+	$padding: 1.5em;
+	$tablet: 860px;
+	$mobile: 520px;
+
+// Mixins
+
+	@mixin font-header {
+		font-family: "Montserrat", sans-serif;
+		font-weight: 700;
+	}
+
+	@mixin background-image($url) {
+		background: url($url) no-repeat center center fixed; 
+		background-size: cover;
+	}
+
+	@mixin button {
+		background: $red;
+		color: white;
+		text-transform: uppercase;
+		@include font-header;
+		padding: 1em;
+		border-radius: 3px;
+		text-decoration: none;
+		outline: 0;
+		border: 0;
+		display: inline-block;
+		@include transition;
+		&:hover {
+			@include transition;
+			background: $blue;
+		}
+	}
+
+// Base
+
+	* {
+		font-family: "Roboto", sans-serif;
+	}
+
+	a {
+		color: $red;
+		text-decoration: none;
+	}
+
+	p {
+		line-height: 2;
+	}
+
+	section {
+		padding-top: 3em;
+		padding-bottom: 3em;
+		h1 {
+			margin-top: 0;
+			text-align: center;
+			@include font-header;
+			@media screen and (max-width: $mobile) {
+				font-size: 1.5em;
+			}
+		}
+	}
+
+.dt img {
+	position: absolute;
+	height: $padding;
+	top: $padding;
+	left: $padding;
+	@media screen and (max-width: $mobile) {
+		margin: 0 auto;
+	    display: block;
+	    position: relative;
+	    left: 0;
+	    margin-bottom: -1.5em;
+	    top: 2em;
+	}
+}
+
+section#intro {
+	@include background-image("../img/fold-bg.jpg");
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	min-height: 80vh;
+	border-top: 5px solid $red;
+	* {
+		color: white;
+	}
+	.content {
+		text-align: center;
+		display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	}
+	img {
+		display: block;
+		margin: 0 auto;
+		height: 7.5em;
+	}
+	h1, h2 {
+		@include font-header;
+		margin: 0.5rem;
+	}
+	h1 {
+		margin-top: 1.5em;
+	}
+	.register {
+		margin-top: 2em;
+		* {
+			display: inline;
+		}
+		p {
+			margin-right: 2em;
+			@include font-header;
+		}
+		a {
+			@include button;
+		}
+	}
+	.back a {
+		margin-top: 2rem;
+		display: block;
+	}
+	@media screen and (max-width: $mobile) {
+		display: block;
+		padding-top: 5em;
+		img {
+			height: 5em;
+		}
+		h1 {
+			margin-top: 2em;
+			font-size: 1.5em;
+		}
+		h2 {
+			font-size: 1.25em;
+		}
+		.register p {
+		    display: block;
+		    margin-right: 0;
+		    margin-top: 0;
+		}
+	}
+}
+
+section#nav {
+	background: $grey-light;
+	padding-top: 0;
+	padding-bottom: 0;
+	nav {
+		@include outer-container;
+		ul {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			padding-left: 0;
+			margin-top: 0;
+			margin-bottom: 0;
+			li {
+				list-style-type: none;
+				padding: 1.5em;
+				a {
+					
+				}
+			}
+		}
+	}
+	@media screen and (max-width: $tablet) {
+		nav ul li {
+			padding: 1.5em 0.75em;
+		}
+	}
+	@media screen and (max-width: $mobile) {
+		display: none;	
+	}
+}
+
+section#about {
+	@include outer-container;
+	padding-top: 3em;
+	padding-bottom: 3em;
+	text-align: center;
+	.content {
+		h1 {
+			color: $red;
+			@include font-header;
+		}
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+section#challenges {
+	background: $blue;
+	h1 {
+		color: white;
+	}
+	.content {
+		@include outer-container;
+		color: white;
+		text-align: center;
+	}
+	.challenge {
+		@include span-columns(6 of 12);
+		margin-top: 2rem;
+		cursor: pointer;
+		h2 {
+			margin: 0;
+			@include font-header;
+		}
+		h3 {
+			line-height: 2;
+			&:after {
+				content: "Click for more";
+				display: block;
+				font-size: 0.8rem;
+				margin-top: 1rem;
+			}
+		}
+		&.active h3:after {
+			content: "Click for less";
+		}
+	}
+
+	@media screen and (max-width: $tablet) {
+		.challenge {
+			@include span-columns(12);
+		}
+	}
+	@media screen and (max-width: $mobile) {
+		.challenge {
+			h2 {
+				font-size: 1em;
+			}
+			h3 {
+				font-size: 1em;
+			}
+		}	
+	}
+}
+
+section#conduct {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	text-align: center;
+	color: white;
+	background: $red;
+	> p {
+		@include outer-container;
+	}
+	.content {
+		@include outer-container;
+		padding-left: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+		li {
+			list-style-type: none;
+			cursor: pointer;
+			h2 {
+				@include font-header;
+				font-size: 1.25em;
+			}
+			p {
+				margin-bottom: 1.25rem;
+			}
+			&:not(:first-child) {
+				border-top: 1px solid $grey-light;
+			}
+		}
+	}
+	@media screen and (max-width: $tablet) {
+		.content {
+			padding: 0 1.5em;
+		}
+	}
+	@media screen and (max-width: $mobile) {
+		.content li h2 {
+			font-size: 1em;
+		}
+	}
+}
+
+section#apply {
+	text-align: center;
+	padding: 3rem 1.5rem;
+	h1 {
+		margin-bottom: 1em;
+	}
+	.link {
+		display: none;
+	}
+	iframe {
+		@include outer-container;
+		height: 75vh;
+	}
+	a {
+		@include button;
+	}
+	@media screen and (max-width: $tablet) {
+		.link {
+			display: block;
+		}
+		.typeform-banner {
+			display: none;
+		}
+	}
+}
+
+section#faq {
+	@extend section#conduct;
+	background: white;
+	color: black;
+	ul {
+		padding-left: 0;
+		margin-top: 3rem;
+		li:nth-child(odd) {
+			h2 {
+				color: $blue;
+			}
+		}
+		li:nth-child(even) {
+			h2 {
+				color: $red;
+			}
+		}
+	}
+}
+
+section#twitter {
+	background: $blue;
+	h1 {
+		margin-bottom: 1em;
+		color: white;
+	}
+	#timeline {
+		@include outer-container;
+		ul {
+			padding-left: 0;
+			li {
+				list-style-type: none;
+				text-align: center;
+				color: white;
+				margin-bottom: 2em;
+				a {
+					color: white;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+section#who {
+	@include outer-container;
+	margin-bottom: 4rem;
+	margin-top: 3rem;
+	a {
+		@include span-columns(6 of 12);
+		h2 {
+			text-align: center;
+			@include font-header;
+			color: $grey-dark;
+			font-size: 1em;
+		}
+		img {
+			height: 5rem;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
